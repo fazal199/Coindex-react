@@ -3,8 +3,7 @@ import React from 'react'
 const Coins = () => {
   return (
     <div>
-      Coins
-
+      coins
     </div>
   )
 }

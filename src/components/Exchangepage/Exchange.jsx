@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import server from "../main";
+import server from "../../main";
 import axios from "axios";
-import Loader from "./Loader";
+import Loader from "../Loader";
 import Exchangecard from "./Exchangecard";
-import NetworkError from "./NetworkError";
+import NetworkError from "../NetworkError";
 
 
 const Exchange = () => {
@@ -50,6 +50,7 @@ const Exchange = () => {
             {/* component */}
             {exchangeData.map((platform) => (
               <Exchangecard
+                key={platform.id}
                 name={platform.name}
                 url={platform.url}
                 imgsrc={platform.image}

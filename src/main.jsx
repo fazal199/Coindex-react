@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import Coins from './components/Coins.jsx'
-import Exchange from './components/Exchange.jsx'
-import Home from './components/Home.jsx'
-import Coinsdetails from './components/Coinsdetails.jsx'
+import Coins from './components/Coinspage/Coins.jsx'
+import Exchange from './components/Exchangepage/Exchange.jsx'
+import Home from './components/Home/Home.jsx'
+import Coinsdetails from './components/Coinspage/Coinsdetails.jsx'
 
 //the server link from the request will be sent
 const server = 'https://api.coingecko.com/api/v3';

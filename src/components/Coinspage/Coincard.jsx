@@ -1,9 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Coincard = ({ name, rank, imgsrc,url }) => {
+const Coincard = ({symbol,name,price,imgsrc,currency}) => {
+
+  let currencySymbol = "₹";
+
+  //deciding the currency symbol
+  switch(currency)
+  {
+      case "inr":
+        currencySymbol = "₹"
+        break;
+
+      case "usd":
+        currencySymbol = "$"
+        break;
+
+      default:
+        currencySymbol = "NA"
+  }
+  
+
+
   return (
     <div className="bg-black py-6 rounded-md shadow-md shadow-white">
-      <a href={url} target="_black">
+      <Link to={`/coins/${name}`}>
         <figure>
           <img
             className="block mx-auto w-20 rounded-full"
@@ -11,11 +32,12 @@ const Coincard = ({ name, rank, imgsrc,url }) => {
             alt={`${name} img`}
           />
         </figure>
-        <div className="text-white font-semibold text-center text-xl mt-4">
-          <h5>{name}</h5>
-          <p className="mt-1">Rank : {rank}</p>
+        <div className="text-white font-semibold text-center text-xl mt-6">
+          <h5 className="font-sembold">"{symbol}"</h5>
+          <h5 className="mt-2">{name}</h5>
+          <p className="mt-2">Price : {currencySymbol}{price}</p>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

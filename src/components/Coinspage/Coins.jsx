@@ -6,12 +6,28 @@ import Coincard from "./Coincard";
 import NetworkError from "../NetworkError";
 
 const Coins = () => {
+
   //state to set the api data
   let [coinsData, setCoinsData] = useState([]);
   let [loading, setLoading] = useState(true);
   let [error,setError] = useState(false);
-  let [currency,setCurrency] = useState("inr");
-  let [pages,setPages] = useState(101);
+  let [currency,setCurrency] = useState("usd");
+  let [pages,setPages] = useState(1);
+
+  let nextPage = ()=>{
+     if(pages == 100)
+     return 
+
+     setPages(pages + 1);
+  }
+
+  let previousPage = ()=>{
+
+    if(pages == 1)
+    return 
+
+    setPages(pages - 1);
+  }
 
   useEffect(() => {
     //make a function to fetch data
@@ -40,6 +56,7 @@ const Coins = () => {
   if(error)
   return <NetworkError/>
 
+
   return (
     <>
       {loading && <Loader />}
@@ -54,17 +71,26 @@ const Coins = () => {
             {coinsData.map((coin) => (
               <Coincard
                 key={coin.id}
+                symbol = {coin.symbol}
                 name={coin.name}
-                url={coin.url}
+                price = {coin.current_price}
                 imgsrc={coin.image}
-                rank={coin.trust_score_rank}
+                currency = {currency}
               />
             ))}
+          </div>
+
+          <div className="max-w-5xl mx-auto flex flex-row flex-wrap justify-between text-2xl font-semibold text-white mt-8 mobile:text-xl">
+            <button onClick={previousPage} disabled={pages == 1} className="tracking-wider disabled:opacity-50 disabled:active:bg-primary disabled:active:text-white bg-primary box-content px-4 py-2 rounded-md btn-shadow cursor-pointer active:bg-white active:text-black">Previous</button>
+             
+            <button onClick={nextPage} disabled={pages==100} className="tracking-wider disabled:opacity-50 disabled:active:bg-primary disabled:active:text-white bg-primary box-content px-4 py-2 rounded-md btn-shadow cursor-pointer active:bg-white active:text-black">Next</button>
           </div>
         </section>
       )}
     </>
   );
+
+ 
 };
 
 export default Coins;

@@ -14,5 +14,13 @@
     .main-heading{
         text-shadow: 0 0 10px rgb(22, 22, 244);
     }
+
+    .boder-left-transparent{
+        border-left-color: transparent;
+    }
+
+    .btn-shadow{
+        box-shadow: 0 0 8px white;
+    }
 }
 

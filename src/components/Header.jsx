@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className="bg-primary py-3 px-4 shadow-black  mobile:relative">
+      <header id="gotoheader" className="bg-primary py-3 px-4 shadow-black  mobile:relative">
         <nav className="max-w-7xl mx-auto flex flex-row flex-wrap justify-between mobile:flex-col">
           <div className="flex flex-row gap-3 items-center">
             <figure className="inline-block">

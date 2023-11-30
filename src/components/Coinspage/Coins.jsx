@@ -5,6 +5,8 @@ import Loader from "../Loader";
 import Coincard from "./Coincard";
 import NetworkError from "../NetworkError";
 import { IoIosArrowDown } from "react-icons/io";
+import { FaArrowDown } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
 
 const Coins = () => {
 
@@ -77,7 +79,6 @@ const Coins = () => {
           <h1 className="text-center uppercase text-5xl font-semibold text-white mb-10 tracking-widest main-heading mobile:text-3xl mobile:leading-[1.5] mobile:mb-6">
             Crypto Coins
           </h1>
-
           {/* currency changer */}
           <div className="relative max-w-[10rem] mx-auto">
           <select onChange={changeCurrency} className="block mx-auto mb-10 font-mono text-2xl tracking-widest bg-primary text-white py-2 px-2 rounded-md shadow-md shadow-white appearance-none font-semibold w-[9rem] text-center cursor-pointer" name="" id="">
@@ -88,7 +89,9 @@ const Coins = () => {
           </div>
 
           {/* grid container */}
-          <div className="max-w-5xl mx-auto grid grid-cols-3 grid-rows-[auto] gap-7 tablet:grid-cols-2 mobile:grid-cols-1">
+          <div className="max-w-5xl relative mx-auto grid grid-cols-3 grid-rows-[auto] gap-7 tablet:grid-cols-2 mobile:grid-cols-1">
+          {/* bottom button */}
+        <a href="#gotobottom" className="text-black uppercase text-2xl font-semibold p-2 rounded absolute left-0 -top-20 cursor-pointer bg-white btn-updown-shadow"><FaArrowDown /></a>
             {/* component */}
             {coinsData.map((coin) => (
               <Coincard
@@ -103,9 +106,9 @@ const Coins = () => {
             ))}
           </div>
 
-          <div className="max-w-5xl mx-auto flex flex-row flex-wrap justify-between text-2xl font-semibold text-white mt-8 mobile:text-xl">
+          <div className="max-w-5xl mx-auto flex flex-row flex-wrap justify-between items-center text-2xl font-semibold text-white mt-8 mobile:text-xl">
             <button onClick={previousPage} disabled={pages == 1} className="tracking-wider disabled:opacity-50 disabled:active:bg-primary disabled:active:text-white bg-primary box-content px-4 py-2 rounded-md btn-shadow cursor-pointer active:bg-white active:text-black">Previous</button>
-             
+        <a href="#gotoheader" className="text-black uppercase text-2xl font-semibold px-3 py-3 rounded cursor-pointer bg-white btn-updown-shadow"><FaArrowUp /></a>
             <button onClick={nextPage} disabled={pages==100} className="tracking-wider disabled:opacity-50 disabled:active:bg-primary disabled:active:text-white bg-primary box-content px-4 py-2 rounded-md btn-shadow cursor-pointer active:bg-white active:text-black">Next</button>
           </div>
         </section>

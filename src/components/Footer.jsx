@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="text-gray-400 bg-gray-900 body-font">
+    <footer id="gotobottom" className="text-gray-400 bg-gray-900 body-font">
       <div className="max-w-7xl px-5 py-8 mx-auto flex flex-row flex-wrap justify-between items-center mobile-lg:flex-col mobile-lg:items-center mobile-lg:gap-5">
         <div className="flex flex-row gap-3 items-center">
           <figure className="inline-block">

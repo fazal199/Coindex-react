@@ -16,6 +16,10 @@
     a{
         display: block;
     }
+
+    html{
+        scroll-behavior: smooth;
+    }
 }
 
 
@@ -30,6 +34,10 @@
 
     .btn-shadow{
         box-shadow: 0 0 8px white;
+    }
+
+    .btn-updown-shadow{
+        box-shadow: 0 0 12px rgb(28, 28, 251);
     }
 
     .animate-up-down{

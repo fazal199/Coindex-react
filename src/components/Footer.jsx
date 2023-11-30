@@ -8,7 +8,7 @@ const Footer = () => {
           <figure className="inline-block">
             <img
               className="h-12"
-              src="images/Cryptocurrency_Logo.svg.png"
+              src="images/Cryptocurrency_Logo.svg"
               alt=""
             />
           </figure>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Coincard = ({symbol,name,price,imgsrc,currency}) => {
+const Coincard = ({id,symbol,name,price,imgsrc,currency}) => {
 
   let currencySymbol = "₹";
 
@@ -24,7 +24,7 @@ const Coincard = ({symbol,name,price,imgsrc,currency}) => {
 
   return (
     <div className="bg-black py-6 rounded-md shadow-md shadow-white">
-      <Link to={`/coins/${name}`}>
+      <Link to={`/coins/${id}`}>
         <figure>
           <img
             className="block mx-auto w-20 rounded-full"

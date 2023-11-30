@@ -17,7 +17,7 @@ const myapprouter = createBrowserRouter(
              <Route path='' element={<Home/>}/>
              <Route path='coins' element={<Coins/>}/>
              <Route path='exchanges' element={<Exchange/>}/>
-             <Route path='coins/:coinname' element={<Coinsdetails/>}/>
+             <Route path='coins/:id' element={<Coinsdetails/>}/>
         </Route>
     )
 )

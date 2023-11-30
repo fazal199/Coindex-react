@@ -42,7 +42,7 @@ const Exchange = () => {
       {loading && <Loader />}
       {!loading && (
         <section className="py-10 px-7">
-          <h1 className="text-center uppercase text-5xl font-semibold text-white mb-10 tracking-widest main-heading mobile:text-4xl mobile:leading-[1.5] mobile:mb-6">
+          <h1 className="text-center uppercase text-5xl font-semibold text-white mb-10 tracking-widest main-heading mobile:text-3xl mobile:leading-[1.5] mobile:mb-6">
             top exchange markets
           </h1>
           {/* grid container */}

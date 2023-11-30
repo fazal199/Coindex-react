@@ -28,7 +28,7 @@ const Header = () => {
             <figure className="inline-block">
               <img
                 className="h-12"
-                src="images/Cryptocurrency_Logo.svg.png"
+                src="images/Cryptocurrency_Logo.svg"
                 alt=""
               />
             </figure>
@@ -37,7 +37,7 @@ const Header = () => {
             </span>
           </div>
           <ul
-            className={`flex  flex-row flex-wrap gap-10 items-center uppercase text-lg font-semibold tracking-wide cursor-pointer text-white mt-1 mobile:flex-col mobile:mt-6 mobile:gap-6 mobile:bg-primary mobile:py-8 mobile:box-content mobile:transition-all mobile:duration-700 mobile:ease-in mobile:absolute mobile:z-40 mobile:top-11  mobile:w-screen mobile:left-0 ${
+            className={`flex  flex-row flex-wrap gap-10 items-center uppercase text-lg font-semibold tracking-wide cursor-pointer text-white mt-1 mobile-lg:gap-5 mobile:flex-col mobile:mt-6 mobile:gap-6 mobile:bg-primary mobile:py-8 mobile:box-content mobile:transition-all mobile:duration-700 mobile:ease-in mobile:absolute mobile:z-40 mobile:top-11  mobile:w-screen mobile:left-0 ${
               !isOpen ? "mobile:left-[-35rem]" : ""
             }`}
           >

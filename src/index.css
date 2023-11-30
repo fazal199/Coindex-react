@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes bitcoinupdown {
+
+    from{
+        top: 0;
+    }
+    to{
+        top: -1rem;
+    }
+}
 
 @layer base{
     a{
@@ -21,6 +30,11 @@
 
     .btn-shadow{
         box-shadow: 0 0 8px white;
+    }
+
+    .animate-up-down{
+        animation: bitcoinupdown 1s ease infinite alternate;
+        filter: drop-shadow(0 0 30px #ffe36e);
     }
 }
 

@@ -19,7 +19,6 @@ const Footer = () => {
         <p className="text-sm font-semibold text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0">
           © 2023 Coindex —
           <a
-            href="https://twitter.com/knyttneve"
             className="text-gray-500 ml-1 font-semibold"
             target="_blank"
             rel="noopener noreferrer"

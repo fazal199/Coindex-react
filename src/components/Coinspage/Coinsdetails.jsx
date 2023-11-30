@@ -120,7 +120,7 @@ const Coinsdetails = () => {
           {/*Coin Data */}
           <div className="mt-12 max-w-2xl mx-auto">
             <time className="font-mono uppercase text-center text-2xl text-white font-semibold w-full block">
-              Last updated: <br />
+              Last update: <br />
               {coinData.market_data.last_updated.split(".")[0]}
             </time>
             <figure>

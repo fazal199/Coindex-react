@@ -23,7 +23,7 @@ const Coincard = ({id,symbol,name,price,imgsrc,currency}) => {
 
 
   return (
-    <div className="bg-black py-6 rounded-md shadow-md shadow-white">
+    <div className="bg-black py-6 rounded-md shadow-md shadow-white hover:scale-105 hover:shadow-blue-600 transition-all duration-300 ease-in">
       <Link to={`/coins/${id}`}>
         <figure>
           <img

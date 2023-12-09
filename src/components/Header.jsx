@@ -24,12 +24,12 @@ const Header = () => {
     <div>
       <header id="gotoheader" className="bg-primary py-3 px-4 shadow-black  mobile:relative">
         <nav className="max-w-7xl mx-auto flex flex-row flex-wrap justify-between mobile:flex-col">
-          <div className="flex flex-row gap-3 items-center">
+          <div className="flex flex-row items-center">
             <figure className="inline-block">
               <img
                 className="h-12"
-                src="images/Cryptocurrency_Logo.svg"
-                alt=""
+                src="/images/Logo.webp"
+                alt="Logo"
               />
             </figure>
             <span className="font-mono text-3xl font-semibold text-white">
